@@ -1,0 +1,694 @@
+{
+  "intents": [
+    {
+      "intent": "despedidas",
+      "examples": [
+        {
+          "text": "Adeus!"
+        },
+        {
+          "text": "até a próxima"
+        },
+        {
+          "text": "até à vista"
+        },
+        {
+          "text": "até breve"
+        },
+        {
+          "text": "até logo"
+        },
+        {
+          "text": "Lhe vejo por ai!"
+        },
+        {
+          "text": "Obrigado"
+        },
+        {
+          "text": "Obrigado, até mais!"
+        },
+        {
+          "text": "Tchau"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "marcar-consulta",
+      "examples": [
+        {
+          "text": "Como faço para marcar uma consulta"
+        },
+        {
+          "text": "Gostar de agendar uma conversa com um medico."
+        },
+        {
+          "text": "Gostaria de agendar uma consulta."
+        },
+        {
+          "text": "Gostaria de agendar um papo com um medico."
+        },
+        {
+          "text": "Marcar visita com especialista."
+        },
+        {
+          "text": "poderia me direcionar para uma consulta"
+        },
+        {
+          "text": "preciso passar em um medico"
+        },
+        {
+          "text": "Quero marcar uma consulta."
+        },
+        {
+          "text": "Realizar marcação de consulta."
+        }
+      ],
+      "description": "Marcar uma consulta para o Paciente"
+    },
+    {
+      "intent": "Remarcar_atendimento",
+      "examples": [
+        {
+          "text": "desejo redefinir meu atendimento"
+        },
+        {
+          "text": "irei me ausentar, preciso marcar o atendimento para outro dia"
+        },
+        {
+          "text": "preciso recombina meu atendimento"
+        },
+        {
+          "text": "quero reagendar o atendimento"
+        },
+        {
+          "text": "Quero remarca um atendimento"
+        },
+        {
+          "text": "reagendar"
+        },
+        {
+          "text": "recombina a data e horario"
+        },
+        {
+          "text": "redefinir"
+        },
+        {
+          "text": "Remarcar atendimento"
+        }
+      ],
+      "description": "Remarcar possíveis atendimento que foram perdidos"
+    },
+    {
+      "intent": "saudacoes",
+      "examples": [
+        {
+          "text": "beleza"
+        },
+        {
+          "text": "Boa noite!"
+        },
+        {
+          "text": "Boa tarde!"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "joinha"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Opa! Eai?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Valores_exames",
+      "examples": [
+        {
+          "text": "me diga o valor do exame"
+        },
+        {
+          "text": "o custo do exame é qual valor"
+        },
+        {
+          "text": "poderia me informar o valor do exame"
+        },
+        {
+          "text": "qual a tarifa cobrada dos exames"
+        },
+        {
+          "text": "qual o gasto dos exames"
+        },
+        {
+          "text": "qual o preço do exames"
+        },
+        {
+          "text": "quanto custa um exame"
+        },
+        {
+          "text": "quero saber os valores dos exames"
+        },
+        {
+          "text": "valores"
+        },
+        {
+          "text": "valores de exames"
+        }
+      ],
+      "description": "Para validar os possíveis valores de cada exame especifico"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "especialidades",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Anestesista",
+          "synonyms": [
+            "Anestesia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cardiologista",
+          "synonyms": [
+            "Cardiologia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cirurgião",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Clinico",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dermatologista",
+          "synonyms": [
+            "Dermatologia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Endocrino",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ginecologista",
+          "synonyms": [
+            "Ginecologia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hemalotogista",
+          "synonyms": [
+            "Hematologia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Neurologista",
+          "synonyms": [
+            "Neurologia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Oftalmologista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Oncologista",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pediatra",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Psiquiatra",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Urologista",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sim_nao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "não",
+          "synonyms": [
+            "nao",
+            "negativo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "certo",
+            "claro",
+            "ok",
+            "positivo",
+            "tudo bem",
+            "tudo certo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_6_1665897286419",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1665896845542",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1665896845554",
+      "previous_sibling": "handler_4_1665896845554"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1665896893444",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1665896893445",
+      "previous_sibling": "handler_6_1665896893445"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1665896845542",
+      "context": {
+        "especialidades": "@especialidades"
+      },
+      "conditions": "@especialidades",
+      "event_name": "input",
+      "dialog_node": "handler_4_1665896845554"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1665896893444",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_6_1665896893445"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmação_Não",
+      "output": {
+        "text": {
+          "values": [
+            "Ok, iremos tentar desde o inicio novamente!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1665897431102",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1665897234654"
+      },
+      "conditions": "@sim_nao:não",
+      "dialog_node": "node_1_1665902614626",
+      "previous_sibling": "node_4_1665902464545"
+    },
+    {
+      "type": "frame",
+      "title": "especialidade",
+      "parent": "node_6_1665897286419",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#marcar-consulta || @especialidades",
+      "dialog_node": "node_2_1665896772969",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_4_1665897234654",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "standard",
+      "title": "Marcar consulta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Me informe a especialidade desejada?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1665897286419",
+      "conditions": "#marcar-consulta",
+      "dialog_node": "node_4_1665897234654"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmação_Sim",
+      "output": {
+        "text": {
+          "values": [
+            "Histórico do agendamento Especialidade: $especialidades Data: $date. Obrigado pela confiança, até mais! "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1665897431102",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "@sim_nao:sim",
+      "dialog_node": "node_4_1665902464545"
+    },
+    {
+      "type": "folder",
+      "title": "Consultas",
+      "dialog_node": "node_6_1665897286419",
+      "previous_sibling": "node_6_1665901770296"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, agora que podemos iniciar, me diga o que precisa? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacoes",
+      "dialog_node": "node_6_1665901770296",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "finalização consulta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Consulta médica concluída, com especialidade marcada para $especialidades e a data $date. Confirma por favor, se esse agendamento está correto?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1665896772969",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_7_1665897431102"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Histórico do agendamento Especialidade: Data: Obrigado pela confiança, até mais! "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1665902464545",
+      "disabled": true,
+      "conditions": "@sim_nao:sim",
+      "dialog_node": "response_2_1665902526756"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Histórico do agendamento Especialidade: Data: Obrigado pela confiança, até mais! "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1665902614626",
+      "disabled": true,
+      "conditions": "@sim_nao:sim",
+      "dialog_node": "response_2_1665902614628"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Boa tarde!  Eu sou o BeLive e estou aqui para ajudar a marcar consulta e deixar sua saúde em dia. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "now().after(\"12:00:00\") && now().before(\"18:00:00\")",
+      "dialog_node": "response_3_1665901619652",
+      "previous_sibling": "response_8_1665901612133"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Ótimo $especialidades! Qual data deseja para realizar a consulta?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1665896772969",
+      "conditions": "@especialidades",
+      "dialog_node": "response_5_1665896782709",
+      "previous_sibling": "slot_4_1665896893444"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Boa noite! Eu sou o BeLive e estou aqui para ajudar a marcar consulta e deixar sua saúde em dia. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1665901620833",
+      "previous_sibling": "response_3_1665901619652"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo! Sua consulta foi marcada para $date com o especialista @especialidades"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1665896772969",
+      "conditions": "@especialidades && @sys-date",
+      "dialog_node": "response_8_1665896996870",
+      "previous_sibling": "response_5_1665896782709"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ótimo! Sua consulta foi marcada para $date com o especialista @especialidades"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1665896772969",
+      "conditions": "@sys-date",
+      "dialog_node": "response_8_1665897075962",
+      "previous_sibling": "response_8_1665896996870"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bom dia! Eu sou o BeLive e estou aqui para ajudar a marcar consulta e deixar sua saúde em dia. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "conditions": "now().after(\"06:00:00\") && now().before(\"12:00:00\")",
+      "dialog_node": "response_8_1665901612133"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1665896772969",
+      "variable": "$especialidades",
+      "dialog_node": "slot_10_1665896845542",
+      "previous_sibling": "node_7_1665897431102"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1665896772969",
+      "variable": "$date",
+      "dialog_node": "slot_4_1665896893444",
+      "previous_sibling": "slot_10_1665896845542"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "BeLive_Default",
+  "language": "pt-br",
+  "description": ""
+}
